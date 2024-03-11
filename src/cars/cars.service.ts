@@ -6,21 +6,21 @@ import { CreateCarDto, UpdateCarDto } from './dto';
 @Injectable()
 export class CarsService {
   private cars: Car[] = [
-    {
-      id: uuid(),
-      brand: 'Toyota',
-      model: 'Corolla',
-    },
-    {
-      id: uuid(),
-      brand: 'Honda',
-      model: 'Civic',
-    },
-    {
-      id: uuid(),
-      brand: 'Jeep',
-      model: 'Cherokee',
-    },
+    // {
+    //   id: uuid(),
+    //   brand: 'Toyota',
+    //   model: 'Corolla',
+    // },
+    // {
+    //   id: uuid(),
+    //   brand: 'Honda',
+    //   model: 'Civic',
+    // },
+    // {
+    //   id: uuid(),
+    //   brand: 'Jeep',
+    //   model: 'Cherokee',
+    // },
   ];
 
   findAll() {
@@ -58,6 +58,7 @@ export class CarsService {
   }
 
   deleteCar(id: string) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const car = this.findById(id);
     this.cars = this.cars.filter((car) => car.id !== id);
   }
